@@ -10,3 +10,15 @@
     padding: 5px;
     flex: 0 1 auto;
 }
+
+textarea {
+    margin: auto;
+    display: block;
+    font-size: 1rem;
+    resize: none;
+    width: 30rem;
+    height: 10rem;
+    border: #080402 1px solid;
+    border-radius: 10px;
+    background-color: #f8f8f8
+}
