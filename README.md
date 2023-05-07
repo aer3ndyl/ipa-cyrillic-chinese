@@ -27,3 +27,4 @@
 2. Unknown
 
 ## Лицензия
+Проект лицензирован под GNU GENERAL PUBLIC LICENSE v.2
