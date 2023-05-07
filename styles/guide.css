@@ -1,0 +1,15 @@
+#guide {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+h2, p {
+    flex: 0 1 auto;
+}
+
+p {
+    font-size: 1.2em;
+}

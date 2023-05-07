@@ -1,24 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="styles/index.css">
-      <title>Document</title>
-   </head>
-   <body>
-    <section class="convert">
-      <div class="container">
-         <div class="input-data">
-            <textarea id="input" maxlength="240" name="input-data"></textarea>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/general.css"> <!-- Общие стили -->
+    <link rel="stylesheet" href="styles/convert.css"> <!-- Стили в разделе конвертации -->
+    <link rel="stylesheet" href="styles/keyboard.css"> <!-- Стили в разделе клавиатуры -->
+    <link rel="stylesheet" href="styles/guide.css"> <!-- Стили в разделе руководства пользователя -->
+    <link href="data:image/x-icon;base64,AAABAAEAEBAAAAAAAABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAFBQUAP///wAGBgYA/v7+AAwMDAAFBQUALS0tAHBwcAD9/f0AEhISACYmJgAEBAQAzc3NAPz8/AAlJSUAHh4eAE1NTQADAwMAPz8/AMXFxQAJCQkAAgICAMvLywDz8/MACAgIADAwMAABAQEAysrKAPn5+QCvr68ABwcHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgICAgIAAAEAABAAAgICAgICAgAADQAWAAAWEgACAgICCQ8JAhsAAAAAAAAADA4CBAAEAhQAGxcYFgAAAAAAAgQABAIIAAAEDgAAAAAAAA4AAgICCQAAFhsbAAAAABYFAAICAgIGAAAAAAAAAAAAFgACAgICBBMAGwAAAAAAABsAAgICAgICAgIRFhsAAAAAAAICAgICAgICAgQAAAAAABoCAgICAgICAgIEGQAAABUCAAICAgIJDBsCAg0AABsdAgACAgICCQMfBAQeAAwAAgICBx0EAgICAgICABsbBAICCQ4AAgICAgICHBYACQICAgIEBAALAAAACgUABAICAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=" rel="icon" type="image/x-icon" />
+    <title>IPA → Палладий</title>
+</head>
+
+<body>
+    <section id="convert">
+        <div class="container">
+            <div class="input-data">
+                <textarea id="input" maxlength="240" name="input-data"></textarea>
+            </div>
+            <div class="output-data">
+                <textarea id="input" maxlength="240" name="input-data" disabled></textarea>
+            </div>
         </div>
-         <div class="output-data">
-            <textarea id="input" maxlength="240" name="input-data" disabled></textarea>
-         </div>
-      </div>
     </section>
-    <section class="keyboard">
+    <section id="keyboard">
+        <div class="parent">
+            <div class="div1"><button>i</button></div>
+            <div class="div2"><button>u</button></div>
+            <div class="div3"><button>ʊ</button></div>
+            <div class="div4"><button>y</button></div>
+            <div class="div5"><button>e</button></div>
+            <div class="div6"><button>ɤ</button></div>
+            <div class="div7"><button>ə</button></div>
+            <div class="div8"><button>a</button></div>
+            <div class="div9"><button>ε</button></div>
+            <div class="div10"><button>p</button></div>
+            <div class="div11"><button>pʰ</button></div>
+            <div class="div12"><button>m</button></div>
+            <div class="div13"><button>f</button></div>
+            <div class="div14"><button>t</button></div>
+            <div class="div15"><button>tʰ</button></div>
+            <div class="div16"><button>n</button></div>
+            <div class="div17"><button>l</button></div>
+            <div class="div18"><button>k</button></div>
+            <div class="div19"><button>kʰ</button></div>
+            <div class="div20"><button>ŋ</button></div>
+            <div class="div21"><button>x</button></div>
+            <div class="div22"><button>h</button></div>
+            <div class="div23"><button>t͡ɕ</button></div>
+            <div class="div24"><button>t͡ɕʰ</button></div>
+            <div class="div25"><button>ɕ</button></div>
+            <div class="div26"><button>ʈ͡ʂ</button></div>
+            <div class="div27"><button>ʈ͡ʂʰ</button></div>
+            <div class="div28"><button>ʂ</button></div>
+            <div class="div29"><button>ʐ</button></div>
+            <div class="div30"><button>ɻ</button></div>
+            <div class="div31"><button>t͡s</button></div>
+            <div class="div32"><button>t͡sʰ</button></div>
+            <div class="div33"><button>s</button></div>
+        </div>
     </section>
-   </body>
+    <section id="guide">
+        <h2>Guide</h2>
+        <p>1. Enter the IPA in the box with the prompt.</p>
+        <p>2. If necessary, use the keypad above to insert characters.</p>
+        <p>3. The data will update as you type.</p>
+    </section>
+</body>
+
 </html>

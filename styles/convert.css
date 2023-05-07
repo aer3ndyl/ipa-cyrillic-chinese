@@ -1,11 +1,13 @@
 .container {
     display: flex;
+    flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
     align-content: center;
 }
 
-.input-data, .output-data {
+.input-data,
+.output-data {
     margin: 5px;
     padding: 5px;
     flex: 0 1 auto;
