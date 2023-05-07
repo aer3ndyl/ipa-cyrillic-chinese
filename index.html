@@ -20,10 +20,10 @@
     <section id="convert">
         <div class="container">
             <div class="input-data">
-                <textarea id="input" maxlength="240" name="input-data"></textarea> <!-- Создание текстового поля -->
+                <textarea id="input" maxlength="240" name="input-data" placeholder="Введите ваш IPA..."></textarea> <!-- Создание текстового поля -->
             </div>
             <div class="output-data">
-                <textarea id="input" maxlength="240" name="input-data" disabled></textarea>
+                <textarea id="output-data" maxlength="240" name="output-data" placeholder="И получите результат от Палладия!" disabled></textarea>
                 <!-- Такое же поле, но без возможности редактирования (для результата)-->
             </div>
         </div>
@@ -72,13 +72,15 @@
 
     <!-- Раздел руководства пользователя -->
     <section id="guide">
-        <h2>Guide</h2>
-        <p>1. Enter the IPA in the box with the prompt.</p>
-        <p>2. If necessary, use the keypad above to insert characters.</p>
-        <p>3. The data will update as you type.</p>
+        <h2>Руководство</h2>
+        <p>1. Введите IPA в поле с подсказкой.</p>
+        <p>2. При необходимости, используйте клавиатуру для вставки символов.</p>
+        <p>3. Данные будут обновляться по мере ввода.</p>
+        <p style="color: red;">4. Отделяйте слоги знаком пробела!</p>
     </section>
     <!-- Конец раздела руководства пользователя -->
 
+    <script src="scripts/keyboard.js"></script> <!-- Логика работы клавиатуры. Загружается после загрузки всех элементов страницы -->
 </body>
 
 </html>
