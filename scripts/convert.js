@@ -4,10 +4,18 @@ const ChineseFinals = ['a', 'ai̯', 'au̯', 'an', 'ɤ', 'ei̯', 'ou̯', 'ən', '
 
 // Получение списка слогов, присутствующих в поле #input
 function getSyllables(input) {
-    const syllables = input.value.trim().split(/\s+/).filter(syllable => syllable !== '');
-    return syllables;
+    try {
+        const syllables = input.value.trim().split(/\s+/).filter(syllable => syllable !== '');
+        return syllables;
+    } catch (error) {
+        const output = document.querySelector('#output');
+        output.style.color = 'red';
+        output.value = 'Произошла ошибка';
+        setTimeout(() => {
+            output.style.color = 'black';
+        }, 2000);
+    }
 }
-
 
 // Выполнения алгоритма после изменения содержимого поля #input
 input.addEventListener('input', () => {
