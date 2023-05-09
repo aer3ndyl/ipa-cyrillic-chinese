@@ -3,12 +3,11 @@ const ChineseInitials = ['p', 'pʰ', 'm', 'f', 't', 'tʰ', 't͡s', 't͡sʰ', 's'
 const ChineseFinals = ['a', 'ai̯', 'au̯', 'an', 'ɤ', 'ei̯', 'ou̯', 'ən', 'əŋ', 'aɚ̯', 'ʅ', 'ɿ', 'i̯a', 'i̯au̯', 'i̯ɛn', 'i̯aŋ', 'i̯e', 'i̯ou̯', 'in', 'iŋ', 'i', 'u̯a', 'u̯ai̯', 'u̯an', 'u̯aŋ', 'u̯o', 'u̯ei̯', 'u̯ən', 'ʊŋ', 'u', 'y̯ɛn', 'y̯e', 'yn', 'i̯ʊŋ', 'y'] //Список китайских финалей
 
 function getSyllables(input) {
-    const syllables = input.value.split(' ');
+    const syllables = input.value.trim().split(/\s+/).filter(syllable => syllable !== '');
     return syllables;
 }
 
-input.addEventListener('input', () => { //При каждом изменении содержимого поля, последовательно выполняем методы
-    console.log(ChineseInitials.length+ChineseFinals.length);
-    console.log(ChineseInitials.length);
-    console.log(ChineseFinals.length);
+
+input.addEventListener('input', () => {
+    console.log(getSyllables(input));
 });
