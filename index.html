@@ -16,14 +16,19 @@
 </head>
 
 <body>
+    <div class="img-container">
+        <img src="images/question.png" alt="My Image">
+      </div>
     <!-- Раздел конвертации -->
     <section id="convert">
         <div class="container">
             <div class="input-data">
-                <textarea id="input" maxlength="240" name="input-data" placeholder="Введите ваш IPA..."></textarea> <!-- Создание текстового поля -->
+                <textarea id="input" maxlength="240" name="input-data" placeholder="Введите ваш IPA..."></textarea>
+                <!-- Создание текстового поля -->
             </div>
             <div class="output-data">
-                <textarea id="output-data" maxlength="240" name="output-data" placeholder="И получите результат от Палладия!" disabled></textarea>
+                <textarea id="output-data" maxlength="240" name="output-data"
+                    placeholder="И получите результат от Палладия!" disabled></textarea>
                 <!-- Такое же поле, но без возможности редактирования (для результата)-->
             </div>
         </div>
@@ -66,23 +71,29 @@
             <div class="div31"><button>t͡s</button></div>
             <div class="div32"><button>t͡sʰ</button></div>
             <div class="div33"><button>s</button></div>
+            <div class="div34"><button>&#x032F;</button></div>
         </div>
     </section>
     <!-- Конец раздела клавиатуры -->
 
     <!-- Раздел руководства пользователя -->
     <section id="guide">
+        <div class="wrapper">
         <h2>Руководство</h2>
         <ul>
-          <li>1. Введите IPA в поле с подсказкой.</li>
-          <li>2. При необходимости, используйте клавиатуру для вставки символов.</li>
-          <li>3. Данные будут обновляться по мере ввода.</li>
-          <li style="color: red;">4. Отделяйте слоги знаком пробела!</li>
+            <li>1. Введите IPA в поле с подсказкой.</li>
+            <li>2. При необходимости, используйте клавиатуру для вставки символов.</li>
+            <li>3. Данные будут обновляться по мере ввода.</li>
+            <li style="color: red;">4. Отделяйте слоги знаком пробела!</li>
         </ul>
-      </section>      
+        </div>
+    </section>
     <!-- Конец раздела руководства пользователя -->
-    
-    <script src="scripts/keyboard.js"></script> <!-- Логика работы клавиатуры. Загружается после загрузки всех элементов страницы -->
+
+    <script src="scripts/keyboard.js"></script>
+    <!-- Логика работы клавиатуры. Загружается после загрузки всех элементов страницы -->
+    <script src="scripts/convert.js"></script>
+    <script src="scripts/guide.js"></script>
 </body>
 
 </html>
