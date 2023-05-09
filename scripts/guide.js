@@ -1,3 +1,4 @@
+// Функция переключения видимости элемента #guide
 function toggleGuideVisibility() {
     const guide = document.getElementById('guide');
     if (guide.style.visibility === 'visible') {
@@ -7,5 +8,6 @@ function toggleGuideVisibility() {
     }
 }
 
+// Привязка функции к клику на картинку
 const img = document.querySelector('.img-container img');
 img.addEventListener('click', toggleGuideVisibility);
