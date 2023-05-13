@@ -10,7 +10,7 @@ function getSyllables(input) {
     } catch (error) {
         const output = document.querySelector('#output');
         output.style.color = 'red';
-        output.value = 'Произошла ошибка';
+        output.value = 'Произошла ошибка.';
         setTimeout(() => {
             output.style.color = 'black';
         }, 2000);
