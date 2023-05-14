@@ -94,6 +94,43 @@
     <!-- Логика работы клавиатуры. Загружается после загрузки всех элементов страницы -->
     <script src="scripts/convert.js"></script>
     <script src="scripts/guide.js"></script>
+    <script src="scripts/brython.js"></script>
+    <script type="text/python">
+        from browser import document, window
+    
+        def handle_input_change(event):
+            from browser import window
+    
+            # Получение данных из localStorage
+            stored_initials = window.localStorage.getItem('ChineseInitials')
+            stored_finals = window.localStorage.getItem('ChineseFinals')
+    
+            # Преобразование данных из строки JSON в список
+            ChineseInitials = window.JSON.parse(stored_initials)
+            ChineseFinals = window.JSON.parse(stored_finals)
+    
+            syllables_dict = {}
+    
+            for initial in ChineseInitials:
+                for final in ChineseFinals:
+                    syllable = initial + final
+                    if syllable not in syllables_dict:
+                        syllables_dict[syllable] = []
+                    syllables_dict[syllable].append(initial)
+    
+            input_value = event.target.value.strip()
+            syllable_data = syllables_dict.get(input_value, [])
+            syllable_data = [s.replace('\u200b', '') for s in syllables_dict.get(input_value, [])]
+        # Обработчик события изменения содержимого поля textarea
+        document["input"].bind("input", handle_input_change)
+    </script>
+    
+    
+    
+    
+    <script>
+        brython();
+    </script>
 </body>
 
 </html>
