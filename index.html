@@ -18,7 +18,7 @@
 <body>
     <div class="img-container">
         <img src="images/question.png" alt="My Image">
-      </div>
+    </div>
     <!-- Раздел конвертации -->
     <section id="convert">
         <div class="container">
@@ -79,13 +79,13 @@
     <!-- Раздел руководства пользователя -->
     <section id="guide">
         <div class="wrapper">
-        <h2>Руководство</h2>
-        <ul>
-            <li>1. Введите IPA в поле с подсказкой.</li>
-            <li>2. При необходимости, используйте клавиатуру для вставки символов.</li>
-            <li>3. Данные будут обновляться по мере ввода.</li>
-            <li style="color: red;">4. Отделяйте слоги знаком пробела!</li>
-        </ul>
+            <h2>Руководство</h2>
+            <ul>
+                <li>1. Введите IPA в поле с подсказкой.</li>
+                <li>2. При необходимости, используйте клавиатуру для вставки символов.</li>
+                <li>3. Данные будут обновляться по мере ввода.</li>
+                <li style="color: red;">4. Отделяйте слоги знаком пробела!</li>
+            </ul>
         </div>
     </section>
     <!-- Конец раздела руководства пользователя -->
@@ -95,42 +95,7 @@
     <script src="scripts/convert.js"></script>
     <script src="scripts/guide.js"></script>
     <script src="scripts/brython.js"></script>
-    <script type="text/python">
-        from browser import document, window
-    
-        def handle_input_change(event):
-            from browser import window
-    
-            # Получение данных из localStorage
-            stored_initials = window.localStorage.getItem('ChineseInitials')
-            stored_finals = window.localStorage.getItem('ChineseFinals')
-    
-            # Преобразование данных из строки JSON в список
-            ChineseInitials = window.JSON.parse(stored_initials)
-            ChineseFinals = window.JSON.parse(stored_finals)
-    
-            syllables_dict = {}
-    
-            for initial in ChineseInitials:
-                for final in ChineseFinals:
-                    syllable = initial + final
-                    if syllable not in syllables_dict:
-                        syllables_dict[syllable] = []
-                    syllables_dict[syllable].append(initial)
-    
-            input_value = event.target.value.strip()
-            syllable_data = syllables_dict.get(input_value, [])
-            syllable_data = [s.replace('\u200b', '') for s in syllables_dict.get(input_value, [])]
-        # Обработчик события изменения содержимого поля textarea
-        document["input"].bind("input", handle_input_change)
-    </script>
-    
-    
-    
-    
-    <script>
-        brython();
-    </script>
+
 </body>
 
 </html>

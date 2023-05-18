@@ -8,36 +8,71 @@ localStorage.setItem('ChineseFinals', JSON.stringify(ChineseFinals));
 
 // Получение списка слогов, присутствующих в поле #input
 function getSyllables(input) {
-    try {
-      const syllables = input.value.trim().split(/\s+/).filter(syllable => syllable !== '');
-      saveSyllablesToLocalStorage(syllables); // Сохранение массива в localStorage
-      return syllables;
-    } catch (error) {
-      const output = document.querySelector('#output');
-      output.style.color = 'red';
-      output.value = 'Произошла ошибка.';
-      setTimeout(() => {
-        output.style.color = 'black';
-      }, 2000);
+  try {
+    const syllables = input.value.trim().split(/\s+/).filter(syllable => syllable !== '');
+    saveSyllablesToLocalStorage(syllables); // Сохранение массива в localStorage
+    return syllables;
+  } catch (error) {
+    const output = document.querySelector('#output-data');
+    output.style.color = 'red';
+    output.value = 'Произошла ошибка.';
+    setTimeout(() => {
+      output.style.color = 'black';
+    }, 2000);
+  }
+}
+
+function saveSyllablesToLocalStorage(syllables) {
+  const serializedSyllables = JSON.stringify(syllables);
+  localStorage.setItem('syllables', serializedSyllables);
+}
+
+function separateInitFinals(syllable) {
+  const initials = JSON.parse(localStorage.getItem('ChineseInitials'));
+  const finals = JSON.parse(localStorage.getItem('ChineseFinals'));
+
+  const syllables = {};
+
+  // Generate all possible syllables
+  for (const initial of initials) {
+    for (const final of finals) {
+      const key = initial + final;
+      syllables[key] = [initial, final];
     }
   }
-  
-  function saveSyllablesToLocalStorage(syllables) {
-    const serializedSyllables = JSON.stringify(syllables);
-    localStorage.setItem('syllables', serializedSyllables);
+
+  // Search for the passed syllable
+  for (let i = 0; i < syllable.length; i++) {
+    const initial = syllable.substring(0, i + 1);
+    const final = syllable.substring(i + 1);
+
+    if (initials.includes(initial) && finals.includes(final)) {
+      return [initial, final];
+    }
   }
 
-function splitChineseSyllable(syllable) {
-    const initialsRegex = new RegExp(`^(${ChineseInitials.join('|')})(?![${ChineseFinals.join('')}])`);
-    const initialsMatch = syllable.match(initialsRegex);
-    const initials = initialsMatch ? initialsMatch[0] : '';
-  
-    const finals = syllable.replace(initials, '');
-  
-    return [initials, finals];
+  document.getElementById('output-data').value = 'Произошла ошибка.';
+  return null;
+}
+
+
+function getProcessedSyllables() {
+  const syllables = JSON.parse(localStorage.getItem('syllables'));
+  const processedSyllables = [];
+
+  if (Array.isArray(syllables)) { // Check if syllables is an array
+    for (const syllable of syllables) {
+      const result = separateInitFinals(syllable);
+      if (result) {
+        processedSyllables.push(result);
+      }
+    }
   }
 
-// Выполнения алгоритма после изменения содержимого поля #input
-// input.addEventListener('input', () => {
-    
-// });
+  return processedSyllables;
+}
+
+input.addEventListener('input', () => {
+  console.log(getSyllables(input));
+  console.log(getProcessedSyllables());
+});
