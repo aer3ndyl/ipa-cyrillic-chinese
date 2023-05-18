@@ -1,0 +1,12 @@
+:root {
+    --accent-color: #109648;
+    --version-color: #18A999;
+    --bg-color: #333;
+    --logo-font: 'Bitter', serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
