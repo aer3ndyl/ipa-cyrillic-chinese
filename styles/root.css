@@ -2,8 +2,11 @@
     --accent-color: #109648;
     --version-color: #18A999;
     --bg-color: #333;
-    --logo-font: 'Bitter', serif;
+    --logo-font: 'Inter', sans-serif;
+    --casual-font: 'Bitter', serif;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Bitter&family=Inter:wght@500&display=swap');
 
 * {
     box-sizing: border-box;

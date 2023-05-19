@@ -1,7 +1,5 @@
 @import url('root.css');
 
-@import url('https://fonts.googleapis.com/css2?family=Bitter&display=swap');
-
 .logo {
     display: flex !important;
     align-items: center;
@@ -21,4 +19,5 @@
 #logo-text>#version {
     color: var(--version-color);
     margin-left: 0.2em;
+    font-family: var(--logo-font);
 }

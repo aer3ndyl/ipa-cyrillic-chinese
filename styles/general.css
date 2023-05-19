@@ -1,7 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Bitter&display=swap');
+@import url('root.css');
 
 body {
-    font-family: 'Bitter', serif;
+    font-family: var(--casual-font);
+    background-size: cover;
+    background-position: center;
 }
 
 button {
@@ -9,4 +11,3 @@ button {
     font-size: 1.25em;
     width: 2em;
 }
-
