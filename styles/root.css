@@ -1,12 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter&family=Josefin+Sans&family=Lato&display=swap');
 :root {
-    --accent-color: #109648;
+    --accent-color: #2ea855;
+    --deux-color: #a2b3c4;
     --version-color: #18A999;
-    --bg-color: #333;
-    --logo-font: 'Inter', sans-serif;
+    --bg-color: #0a1e2d;
+    --logo-font: 'Josefin Sans', sans-serif;
     --casual-font: 'Bitter', serif;
+    --guide-font: 'Lato', sans-serif;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Bitter&family=Inter:wght@500&display=swap');
 
 * {
     box-sizing: border-box;

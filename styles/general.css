@@ -2,8 +2,7 @@
 
 body {
     font-family: var(--casual-font);
-    background-size: cover;
-    background-position: center;
+    background-color: var(--bg-color);
 }
 
 button {

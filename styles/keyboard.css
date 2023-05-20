@@ -21,6 +21,13 @@
     align-items: center;
 }
 
+.parent>div>button {
+    border-radius: 5px !important;
+    height: 2em;
+    color: var(--bg-color);
+    background-color: #D782BA;
+}
+
 .parent {
     display: grid;
     grid-template-columns: repeat(17, 1fr);
