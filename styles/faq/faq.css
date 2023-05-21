@@ -1,0 +1,36 @@
+@import url('../root.css');
+
+#main {
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    margin: 0;
+}
+
+#faq {
+    width: calc(66.66% - 200px);
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    padding: 20px;
+    position: relative;
+    font-family: var(--guide-font);
+}
+
+.question {
+    position: relative;
+    text-decoration: none;
+}
+
+.question::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 95%;
+    height: 2px;
+    background-color: #ccc;
+}
+
+.answer {
+    margin-top: 1%;
+}

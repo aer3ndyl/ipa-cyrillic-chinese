@@ -1,19 +1,18 @@
 @import url('../root.css');
 
 .logo {
-    display: flex !important;
+    display: flex;
     align-items: center;
     justify-content: center;
     font-family: var(--logo-font);
     margin-top: 1%;
-    /* margin-bottom: 1%; */
     padding-bottom: 10px;
-    user-select: none !important;
+    user-select: none;
 }
 
 .logo>#logo-text {
     color: var(--accent-color);
-    font-size: 3em !important;
+    font-size: 3em;
     margin-right: 0.2em;
     font-family: var(--logo-font);
 }
@@ -25,12 +24,12 @@
 }
 
 .info {
-    display: flex !important;
+    display: flex;
     align-items: center;
     justify-content: center;
     font-family: var(--logo-font);
     color: bisque;
     font-size: 1.2em;
     margin-bottom: 1%;
-    user-select: none!important;
+    user-select: none;
 }
