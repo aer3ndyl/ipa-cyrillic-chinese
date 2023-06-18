@@ -2,3 +2,4 @@
 <a href="https://www.flaticon.com/free-icons/guide" title="guide icons">Guide icons created by Freepik - Flaticon</a>
 <a href="https://www.flaticon.com/free-icons/back" title="back icons">Back icons created by Pixel perfect - Flaticon</a>
 <a href="https://www.flaticon.com/free-icons/excel" title="excel icons">Excel icons created by Flat Icons - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/about" title="about icons">About icons created by srip - Flaticon</a>

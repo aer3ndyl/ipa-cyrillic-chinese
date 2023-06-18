@@ -1,0 +1,16 @@
+.avatars {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1%;
+    margin-bottom: 1%;
+  }
+  
+  .avatars img {
+    width: 250px;
+    margin-right: 10px; /* Optional: Add some spacing between the images */
+  }
+  
+  #header-text {
+    font-size: 2.5em !important;
+  }
