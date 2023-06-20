@@ -36,6 +36,7 @@ Body{
     font-size: 25px;
 }
 .ReviewText{
+    font-family: 'Josefin Sans', sans-serif;
     height: 50px;
     width: 100%;
     background: #f8f8f8;
